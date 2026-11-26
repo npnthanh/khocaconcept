@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Friendly server-level error pages (including LiteSpeed/ModSecurity responses).
+ErrorDocument 400 /server-message.shtml
+ErrorDocument 401 /server-message.shtml
+ErrorDocument 403 /server-message.shtml
+ErrorDocument 404 /server-message.shtml
+ErrorDocument 413 /server-message.shtml
+ErrorDocument 429 /server-message.shtml
+ErrorDocument 500 /server-message.shtml
+ErrorDocument 503 /server-message.shtml

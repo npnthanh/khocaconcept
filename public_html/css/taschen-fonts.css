@@ -1,0 +1,15 @@
+/* ==========================================================================
+   AUTHENTIC MODERN EDITORIAL FONTS - 100% SANS-SERIF & VIETNAMESE SUPPORT
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-serif: 'Plus Jakarta Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-brand: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    --font-editorial: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    --font-family-heading: 'Plus Jakarta Sans', 'Montserrat', sans-serif !important;
+    --font-family-accent: 'Plus Jakarta Sans', 'Montserrat', sans-serif !important;
+    --font-family-regular: 'Plus Jakarta Sans', 'Montserrat', sans-serif !important;
+}
